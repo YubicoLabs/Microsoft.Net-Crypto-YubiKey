@@ -11,7 +11,7 @@ namespace YubiKeyPivSign
             Create a new CspParameters object that identifies a
             Smart Card Cryptographic Provider.
             The YubiKey 5 PIV application is accessed through the 
-            "Microsoft Base Smart Card Crypto Provider
+            "Microsoft Base Smart Card Crypto Provider".
             */
             CspParameters csp = new CspParameters(1, "Microsoft Base Smart Card Crypto Provider");
             csp.Flags = CspProviderFlags.UseDefaultKeyContainer;
