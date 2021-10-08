@@ -7,35 +7,39 @@ namespace YubiKeyPivSign
     {
         static void Main(string[] args)
         {
-            /*
-            Create a new CspParameters object that identifies a
-            Smart Card Cryptographic Provider.
-            The YubiKey 5 PIV application is accessed through the 
-            "Microsoft Base Smart Card Crypto Provider".
-            */
-            CspParameters csp = new CspParameters(1, "Microsoft Base Smart Card Crypto Provider");
-            csp.Flags = CspProviderFlags.UseDefaultKeyContainer;
 
-            /*
-            Initialize an RSACryptoServiceProvider object using
-            the CspParameters object.
-            */
-            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(csp);
+            if (OperatingSystem.IsWindows()) // Check that the OS is Windows.
+            {
 
-            // Create some data to sign.
-            byte[] data = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7 };
+                /*
+                Create a new CspParameters object that initiates the
+                "Microsoft Base Smart Card Crypto Provider".
+                The YubiKey 5 PIV is accessed through this CSP.
+                */
 
-            Console.WriteLine("Data			: " + BitConverter.ToString(data));
+                CspParameters csp = new CspParameters(1, "Microsoft Base Smart Card Crypto Provider");
+                csp.Flags = CspProviderFlags.UseDefaultKeyContainer;
 
-            // Sign the data using a YubiKey with the Smart Card Cryptographic Provider.
-            byte[] sig = rsa.SignData(data, "SHA1");
+                /*
+                Initialize an RSACryptoServiceProvider object with CSP object.
+                */
+                RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(csp);
 
-            Console.WriteLine("Signature	: " + BitConverter.ToString(sig));
+                // Create a byte array of data to be signed.
+                byte[] dataTBS = new byte[] { 7, 6, 5, 4, 3, 2, 1, 0 };
 
-            // Verify the signed data using the Smart Card Cryptographic Provider.
-            bool verified = rsa.VerifyData(data, "SHA1", sig);
+                Console.WriteLine("Data to be signed: " + BitConverter.ToString(dataTBS));
 
-            Console.WriteLine("Verified		: " + verified);
+                // Sign the data using a YubiKey PIV with the Smart Card CSP.
+                byte[] sigData = rsa.SignData(dataTBS, "SHA1");
+
+                Console.WriteLine("Signed data: " + BitConverter.ToString(sigData));
+
+                // Verify the signed data using the Smart Card CSP.
+                bool verifiedSig = rsa.VerifyData(dataTBS, "SHA1", sigData);
+
+                Console.WriteLine("Signature verification (true or false): " + verifiedSig);
+            }
         }
     }
 }
