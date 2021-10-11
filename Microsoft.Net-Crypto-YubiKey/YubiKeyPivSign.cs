@@ -40,6 +40,10 @@ namespace YubiKeyPivSign
 
                 Console.WriteLine("Signature verification (true or false): " + verifiedSig);
             }
+            else
+            {
+                Console.WriteLine("The Microsoft CSP is not supported on this OS.");
+            }
         }
     }
 }
