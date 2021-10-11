@@ -31,9 +31,9 @@
 
 This repository contains a Visual Studio 2019 solution with sample code in C# that uses Microsoft .NET Cryptography Model with YubiKey 5 PIV.
 
-The C# code in YubiKeyPivSign.cs demonstrates how to sign some data with a YubiKey 5 PIV on Windows 10.
+The C# code in `YubiKeyPivSign.cs` demonstrates how to sign some data with a YubiKey 5 PIV on Windows 10.
 
-The YubiKey 5 PIV is accessed from Microsoft .NET Cryptography Model by using the underlying "Microsoft Base Smart Card Crypto Provider".
+The YubiKey 5 PIV is accessed from Microsoft .NET Cryptography Model by using the underlying `Microsoft Base Smart Card Crypto Provider`.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -82,7 +82,7 @@ For test purposes, it is possible to use the [Yubico .NET YubiKey SDK](https://g
 
 Insert a YubiKey 5 with a X.509 certificate in the USB-port at the PC.
 
-Run the application by pressing the button "Microsoft.Net-Crypto-YubiKey" in the top bar of Microsoft Visual Studio 2019 (see the image above), or run the executable file `<file path to the solution>\Microsoft.Net-Crypto-YubiKey\bin\Debug\net5.0\Microsoft.Net-Crypto-YubiKey.exe`.
+Run the application by either pressing the button "Microsoft.Net-Crypto-YubiKey" in the top bar of Microsoft Visual Studio 2019 (see the image above), or running the executable file `<file path to the solution>\Microsoft.Net-Crypto-YubiKey\bin\Debug\net5.0\Microsoft.Net-Crypto-YubiKey.exe`.
 
 This will launch a command prompt, which in turn will present the Windows Security dialog box for a Smart Card. Enter the PIN code to the YubiKey 5 PIV in this dialog box.
 
@@ -104,7 +104,7 @@ Distributed under the Apache License 2.0. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Please contact Yubico solutions developer program if you have any questions.
+Please contact the Yubico solutions developer program if you have any questions.
 
 Website: https://developers.yubico.com/
 
@@ -117,7 +117,7 @@ Email: developersprogram@yubico.com
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-More information on how to use hardware modules and smart cards with Microsoft .NET is available at [Microsoft: How to Access Hardware Encryption Devices](https://docs.microsoft.com/en-us/dotnet/standard/security/how-to-access-hardware-encryption-devices).
+More information on how to use hardware modules and smart cards with Microsoft .NET is available at Microsoft's web: [How to Access Hardware Encryption Devices](https://docs.microsoft.com/en-us/dotnet/standard/security/how-to-access-hardware-encryption-devices).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

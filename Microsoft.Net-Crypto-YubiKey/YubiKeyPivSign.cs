@@ -20,9 +20,7 @@ namespace YubiKeyPivSign
                 CspParameters csp = new CspParameters(1, "Microsoft Base Smart Card Crypto Provider");
                 csp.Flags = CspProviderFlags.UseDefaultKeyContainer;
 
-                /*
-                Initialize an RSACryptoServiceProvider object with CSP object.
-                */
+                // Initialize an RSACryptoServiceProvider object with CSP object.
                 RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(csp);
 
                 // Create a byte array of data to be signed.
@@ -40,7 +38,7 @@ namespace YubiKeyPivSign
 
                 Console.WriteLine("Signature verification (true or false): " + verifiedSig);
             }
-            else
+            else // The OS is not Windows.
             {
                 Console.WriteLine("The Microsoft CSP is not supported on this OS.");
             }
