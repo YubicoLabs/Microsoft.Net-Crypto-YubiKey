@@ -117,7 +117,7 @@ Email: developersprogram@yubico.com
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Microsoft: How to Access Hardware Encryption Devices](https://docs.microsoft.com/en-us/dotnet/standard/security/how-to-access-hardware-encryption-devices)
+More information on how to use hardware modules and smart cards with Microsoft .NET is available at [Microsoft: How to Access Hardware Encryption Devices](https://docs.microsoft.com/en-us/dotnet/standard/security/how-to-access-hardware-encryption-devices).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
