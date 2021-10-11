@@ -61,7 +61,7 @@ Download and install [Microsoft Visual Studio 2019](https://visualstudio.microso
 A X.509 certificate needs to be enrolled to the YubiKey 5 PIV before using this sample code for signing. 
 For test purposes, it is possible to use the [Yubico .NET YubiKey SDK](https://github.com/Yubico/Yubico.NET.SDK/tree/develop/Yubico.YubiKey/examples/PivSampleCode/) to generate a key-pair and generate a self-signed certificate on the YubiKey 5 PIV.
 
-### Installation
+### Build the solution
 
 1. Clone the repo
    ```sh
@@ -71,7 +71,7 @@ For test purposes, it is possible to use the [Yubico .NET YubiKey SDK](https://g
 
 3. Select the menu item "Build" and select the option "Build Solution".
 
-[build]: images/build.png
+![](/images/build.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -80,13 +80,13 @@ For test purposes, it is possible to use the [Yubico .NET YubiKey SDK](https://g
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Insert the YubiKey 5 in the USB-port at the PC.
+Insert a YubiKey 5 with a X.509 certificate in the USB-port at the PC.
 
-Execute the application by pressing the button "Microsoft.Net-Crypto-YubiKey" in the top bar of Microsoft Visual Studio 2019 (see the image above).
+Run the application by pressing the button "Microsoft.Net-Crypto-YubiKey" in the top bar of Microsoft Visual Studio 2019 (see the image above), or run the executable file `<file path to the solution>\Microsoft.Net-Crypto-YubiKey\bin\Debug\net5.0\Microsoft.Net-Crypto-YubiKey.exe`.
 
 This will launch a command prompt, which in turn will present the Windows Security dialog box for a Smart Card. Enter the PIN code to the YubiKey 5 PIV in this dialog box.
 
-[run]: images/run.png
+![](/images/run.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -95,7 +95,7 @@ This will launch a command prompt, which in turn will present the Windows Securi
 <!-- LICENSE -->
 ## License
 
-Distributed under the Apache License. See `LICENSE.txt` for more information.
+Distributed under the Apache License 2.0. See `LICENSE` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -104,7 +104,11 @@ Distributed under the Apache License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Sebastian Elfors - sebastian.elfors@yubico.com
+Please contact Yubico solutions developer program if you have any questions.
+
+Website: https://developers.yubico.com/
+
+Email: developersprogram@yubico.com
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
